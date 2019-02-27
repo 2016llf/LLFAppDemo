@@ -59,6 +59,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window switchRootViewController];
     [self.window makeKeyAndVisible];
+    
 }
 
 
