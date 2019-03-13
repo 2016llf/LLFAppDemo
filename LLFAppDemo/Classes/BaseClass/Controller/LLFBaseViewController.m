@@ -32,8 +32,12 @@
     self.view.backgroundColor =  UIColorFromRGB(0x182125);
 }
 
+#pragma mark - private
+
 - (void)gotoRegist
-{}
+{
+    
+}
 
 - (void)gotoLogin
 {
@@ -50,4 +54,18 @@
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:UD_IS_LOGIN];
 
 }
+
+#pragma mark - 关闭键盘
+
+- (void)closeKeyboard {
+    //添加手势关闭键盘
+    UITapGestureRecognizer * gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard:)];
+    gesture.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:gesture];
+}
+
+- (void)closeKeyboard:(UITapGestureRecognizer*)sender {
+    [self.view endEditing:YES];
+}
+
 @end

@@ -16,10 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  去登陆
  */
 - (void)gotoLogin;
+
 /**
  *  去注册
  */
 - (void)gotoRegist;
+
+/**
+ *  关闭键盘
+ */
+- (void)closeKeyboard;
 
 @end
 
